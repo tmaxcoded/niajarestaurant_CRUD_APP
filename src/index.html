@@ -1,12 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>webpack starterkit</title>
-</head>
-<body>
-  <h1>webpack starter</h1>
-  <p>✨ A lightweight foundation for your next webpack based frontend project.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>webpack starterkit</title>
+  </head>
+  <body>
+    <header>
+      <!-- As a link -->
+      <nav class="navbar fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Naija Restaurant</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+      </nav>
+    </header>
+
+    <br />
+    <br />
+    <div class="container">
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-4">
+          <form id="formElement">
+            <input type="text" hidden="hidden" id="restaurantId" />
+            <div class="form-group">
+              <label for="restaurantName">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="restaurantName"
+                aria-describedby="emailHelp"
+                required
+                placeholder="Name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="restaurantLocation">Location</label>
+              <input
+                type="text"
+                class="form-control"
+                id="restaurantLocation"
+                required
+                placeholder="Location"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Cuisine Type</label>
+              <select
+                class="form-control"
+                id="exampleFormControlSelect1"
+                required
+              >
+                <option></option>
+                <option value="Lagos">Lagos</option>
+                <option value="Ibadan">Ibadan</option>
+                <option value="Kano">Kano</option>
+                <option value="Osun">Osun</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-secondary submittedButton">
+              Submit
+            </button>
+            <!-- Button trigger modal -->
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> -->
+          </form>
+        </div>
+        <div class="col-8">
+          <table class="table" id="producttable"></table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./bundle.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+  </body>
 </html>
